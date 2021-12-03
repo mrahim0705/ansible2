@@ -1,0 +1,10 @@
+- name: Install Apache on CentOS
+  host: all
+  task:
+    - yum: 
+       name: httpd 
+       state: latest 
+    - service:
+       name: httpd
+       state: started
+       enabled: yes
